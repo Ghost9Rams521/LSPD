@@ -1,0 +1,59 @@
+<?php
+session_start(); // Démarrer la session
+
+// Vérifier si le nom est stocké dans la session
+if (isset($_SESSION['nom'])) {
+    $nom = htmlspecialchars($_SESSION['nom']); // Sécuriser le nom
+} else {
+    $nom = "Nom non spécifié";
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSPD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barre latérale -->
+        <aside class="sidebar">
+            <h2>MENU</h2>
+            <ul class="main-menu">
+                <!-- Éléments en haut -->
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Base de données</a></li>
+                <li><a href="#">Amende</a></li>
+            </ul>
+            <ul class="sidebar_2">
+                <!-- Éléments en bas -->
+                <li><a href="#">Profil</a></li>
+                <li><a href="#">Paramètres</a></li>
+                <li><a href="index.html">Déconnexion</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="content">
+            <section class="hero">
+                <h1>Bienvenue 
+                <?php 
+                if (isset($_GET['nom'])) {
+                        echo "<p class='erreur'>".$_GET['nom']."</p>";
+                    }
+                ?>
+            </h1>
+            </section>
+
+            <section class="about">
+                <h2>À propos</h2>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

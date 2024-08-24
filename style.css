@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Barre latérale */
+.sidebar {
+    width: 250px;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    position: fixed;
+    height: 100vh;
+    font-size: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacer le contenu verticalement */
+}
+
+.sidebar h2 {
+    margin-top: 40px;
+}
+
+.sidebar ul {
+    margin-bottom: 40vh;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Contenu principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+.hero {
+    background-color: #f0f0f0;
+    padding: 50px;
+    text-align: center;
+}
+
+.about {
+    margin-top: 20px;
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+
+/* Style pour la section À PROPOS */
+.about-content {
+    display: flex;
+    align-items: center; /* Centrer verticalement le texte par rapport à l'image */
+    gap: 20px; /* Espacer l'image et le texte */
+}
+
+.about-image {
+    width: 10%; /* Ajuster la taille de l'image selon vos besoins */
+    margin-top: 2%;
+}
+
+.about-text {
+    width: 70%; /* Ajuster la taille du texte pour équilibrer avec l'image */
+    margin-top: 2%;
+}
