@@ -14,7 +14,7 @@ body {
 }
 
 /* Barre latérale */
-.sidebar {
+.sidebar, .sidebar_bienvenu {
     width: 250px;
     background-color: #0056b3;
     color: white;
@@ -27,7 +27,7 @@ body {
     justify-content: space-between; /* Espacer le contenu verticalement */
 }
 
-.sidebar h2 {
+.sidebar h2, .sidebar_bienvenu h2 {
     margin-top: 40px;
 }
 
@@ -35,16 +35,20 @@ body {
     margin-bottom: 40vh;
 }
 
-.sidebar ul li {
+.sidebar_bienvenu ul{
+    margin-top: 10vh;
+}
+
+.sidebar ul li, .sidebar_bienvenu ul li {
     margin: 20px 0;
 }
 
-.sidebar ul li a {
+.sidebar ul li a, .sidebar_bienvenu ul li a {
     color: white;
     text-decoration: none;
 }
 
-.sidebar ul li a:hover {
+.sidebar ul li a:hover, .sidebar_bienvenu ul li a:hover {
     text-decoration: underline;
 }
 
@@ -83,4 +87,43 @@ body {
 .about-text {
     width: 70%; /* Ajuster la taille du texte pour équilibrer avec l'image */
     margin-top: 2%;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px; /* Ajustez la largeur maximale */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
 }

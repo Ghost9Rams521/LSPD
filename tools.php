@@ -72,14 +72,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="container">
         <!-- Barre latérale -->
-        <aside class="sidebar">
+        <aside class="sidebar_bienvenu">
             <h2>MENU</h2>
             <ul class="main-menu">
                 <!-- Éléments en haut -->
                 <li><a href="bienvenu.php">Accueil</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Base de données</a></li>
+                <li><a href="BDD.php">Base de données</a></li>
                 <li><a href="#">Amende</a></li>
+                <li><a href="#">Rapport</a></li>
             </ul>
             <ul class="sidebar_2">
                 <!-- Éléments en bas -->
